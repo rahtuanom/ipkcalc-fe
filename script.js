@@ -7,7 +7,7 @@ async function hitungIPK() {
   console.log('Nilai NIM:', nim);
 
   try {
-    const response = await fetch(`http://localhost:3000/mahasiswa/${nim}/ipk`);
+    const response = await fetch(`https://ipkcalc-be-production.up.railway.app/mahasiswa/${nim}/ipk`);
     const data = await response.json();
 
     document.getElementById('result').textContent = `Mahasiswa dengan NIM ${data.nim} memiliki IPK ${data.ipk}`;
